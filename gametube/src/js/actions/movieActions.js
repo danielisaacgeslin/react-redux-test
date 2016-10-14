@@ -4,3 +4,10 @@ export function addMovie(movie){
     payload: movie
   };
 }
+
+export function selectMovie(movie){
+  return {
+    type: 'SELECT_MOVIE',
+    payload: movie
+  };
+}

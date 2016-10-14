@@ -14,10 +14,9 @@ export default class MovieList extends React.Component{
   }
 
   render(){
-    console.log(this.props.movies);
     const items = this.props.movies.map((movie)=>{
       return (
-        <div key={movie.id}>
+        <div key={movie.id} onClick={()=>this.props.onSelectMovie(movie)}>
           <p>{movie.id} {movie.title} {movie.url}</p>
         </div>
       );
