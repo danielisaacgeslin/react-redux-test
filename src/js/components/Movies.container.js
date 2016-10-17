@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from 'react-redux';
 import * as movieActions from '../actions/movies.actions';
-import MovieList from './MovieList';
-import Player from './Player';
+import MovieList from './Movies/MovieList';
+import Player from './Movies/Player';
 
 class Movies extends React.Component {
 	constructor(props){

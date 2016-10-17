@@ -23,9 +23,11 @@ export default class MovieList extends React.Component{
       );
     });
     return (
-      <div className="movieList">
-        <a className="btn btn-primary " onClick={this.onAddMovie.bind(this)}>add movie</a>
-        {items}
+      <div className="movieList row">
+        <div className="col-xs-12">
+          <a className="btn btn-primary " onClick={this.onAddMovie.bind(this)}>add movie</a>
+          {items}
+        </div>
       </div>
     );
   }

@@ -7,7 +7,8 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(reducers, {
   movies: [],
-  selectedMovie: {}
+  selectedMovie: {},
+  contactData: {}
 }, applyMiddleware(sagaMiddleware));
 
 sagaMiddleware.run(fetchMovies);

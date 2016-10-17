@@ -8,7 +8,15 @@ export default class Footer extends React.Component {
 
 	render() {
 		return (
-			<footer>footer</footer>
+			<footer>
+				<div className="container">
+					<div className="row">
+						<div className="col-xs-12">
+							
+						</div>
+					</div>
+				</div>
+			</footer>
 		);
 	}
 
