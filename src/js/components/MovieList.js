@@ -6,10 +6,11 @@ export default class MovieList extends React.Component{
   }
 
   onAddMovie(){
+    const id = Math.round(Math.random() * 1000);
     this.props.onAddMovie({
-      id: Math.round(Math.random() * 1000),
+      id: id,
       title: 'movie title',
-      url: 'https://www.youtube.com/embed/GNWYNK0MVrU'
+      url: id > 500 ? 'https://www.youtube.com/embed/GNWYNK0MVrU' : 'https://www.youtube.com/embed/J7E_Z_QsO-0'
     });
   }
 

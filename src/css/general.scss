@@ -10,5 +10,13 @@
   }
   .movie-item {
     padding: 5px 0;
+    cursor: pointer;
+  }
+}
+
+.player {
+  iframe {
+    width:100%;
+    height:500px;
   }
 }

@@ -10,9 +10,9 @@ export default class Player extends React.Component{
       return null;
     }
     return (
-      <div>
+      <div className="player">
         <h1>{this.props.selectedMovie.id} {this.props.selectedMovie.title}</h1>
-        <iframe width="560" height="315" src={this.props.selectedMovie.url} frameborder="0" allowfullscreen></iframe>
+        <iframe src={this.props.selectedMovie.url} frameBorder="0" allowFullScreen></iframe>
       </div>
     );
   }
