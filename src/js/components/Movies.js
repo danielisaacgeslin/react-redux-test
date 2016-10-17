@@ -1,12 +1,19 @@
 import React from "react";
 import { connect } from 'react-redux';
-import * as movieActions from '../actions/movieActions';
+import * as movieActions from '../actions/movies.actions';
 import MovieList from './MovieList';
 import Player from './Player';
 
 class Movies extends React.Component {
 	constructor(props){
 		super(props);
+		if(!this.props.movies.length){
+			this.fetchMovies();
+		}
+	}
+
+	fetchMovies(){
+		this.props.fetchMovies();
 	}
 
 	render() {
@@ -20,7 +27,8 @@ class Movies extends React.Component {
 					></MovieList>
 				</div>
 				<div className="col-xs-12 col-md-10">
-					<Player selectedMovie={this.props.selectedMovie}></Player>
+					<Player
+					selectedMovie={this.props.selectedMovie}></Player>
 				</div>
 			</div>
 		);
@@ -33,6 +41,7 @@ const mapStateToProps = (state)=>{
 
 const mapDispatchToProps = (dispatch) =>{
 	return {
+		fetchMovies: () => dispatch(movieActions.fetchMovies()),
 		onAddMovie: (movie) => dispatch(movieActions.addMovie(movie)),
 		onSelectMovie: (movie) => dispatch(movieActions.selectMovie(movie))
 	};

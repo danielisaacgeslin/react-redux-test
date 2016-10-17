@@ -4,8 +4,12 @@ export function movies(state = [], action = {}){
       return state.concat({
         id: action.payload.id,
         title: action.payload.title,
-        url: action.payload.url
+        youtubeId: action.payload.youtubeId
       });
+      break;
+    case 'FETCH_MOVIES_SUCCESS':
+      return action.payload
+      break;
     default:
       return state;
   }
@@ -15,6 +19,7 @@ export function selectedMovie(state = {}, action = {}){
   switch (action.type) {
     case 'SELECT_MOVIE':
       return action.payload;
+      break;
     default:
       return state;
   }
