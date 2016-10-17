@@ -11,13 +11,17 @@ class Movies extends React.Component {
 
 	render() {
 		return (
-			<div>
-        <MovieList
-				movies={this.props.movies}
-				onAddMovie={this.props.onAddMovie.bind(this)}
-				onSelectMovie={this.props.onSelectMovie.bind(this)}
-				></MovieList>
-				<Player selectedMovie={this.props.selectedMovie}></Player>
+			<div className="row">
+				<div className="col-xs-12 col-md-2">
+	        <MovieList
+					movies={this.props.movies}
+					onAddMovie={this.props.onAddMovie.bind(this)}
+					onSelectMovie={this.props.onSelectMovie.bind(this)}
+					></MovieList>
+				</div>
+				<div className="col-xs-12 col-md-10">
+					<Player selectedMovie={this.props.selectedMovie}></Player>
+				</div>
 			</div>
 		);
 	}

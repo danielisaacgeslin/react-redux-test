@@ -5,7 +5,8 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Layout from './components/Layout';
 import Movies from './components/Movies';
-//require("../css/style.scss");
+
+require("../css/style.scss");
 
 store.subscribe(()=>{
 	console.log(store.getState());

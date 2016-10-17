@@ -16,13 +16,13 @@ export default class MovieList extends React.Component{
   render(){
     const items = this.props.movies.map((movie)=>{
       return (
-        <div key={movie.id} onClick={()=>this.props.onSelectMovie(movie)}>
-          <p>{movie.id} {movie.title} {movie.url}</p>
-        </div>
+        <a className="movie-item" key={movie.id} onClick={()=>this.props.onSelectMovie(movie)}>
+          <span>{movie.id} {movie.title} {movie.url}</span>
+        </a>
       );
     });
     return (
-      <div>
+      <div className="movieList">
         <a onClick={this.onAddMovie.bind(this)}>add movie</a>
         {items}
       </div>

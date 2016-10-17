@@ -1,0 +1,14 @@
+/*general*/
+.transition {transition:All 0.2s ease-in-out; -webkit-transition:All 0.2s ease-in-out; -moz-transition:All 0.2s ease-in-out; -o-transition:All 0.2s ease-in-out;}
+
+.movieList {
+  background-color: #343d46;
+  padding: 15px 5px;
+  a, p {
+    display:block;
+    color: #FFF;
+  }
+  .movie-item {
+    padding: 5px 0;
+  }
+}

@@ -24,6 +24,10 @@ module.exports = {
             'style', // backup loader when not building .css file
             'css!sass' // loaders to preprocess CSS
         )
+      },
+      {
+        test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
+        loader: 'url-loader'
       }
     ]
   },
