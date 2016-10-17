@@ -12,6 +12,7 @@ export default class Player extends React.Component{
     return (
       <div>
         <h1>{this.props.selectedMovie.id} {this.props.selectedMovie.title}</h1>
+        <iframe width="560" height="315" src={this.props.selectedMovie.url} frameborder="0" allowfullscreen></iframe>
       </div>
     );
   }
