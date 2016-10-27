@@ -10,9 +10,11 @@ export default class Player extends React.Component{
       return null;
     }
     const id = 'https://www.youtube.com/embed/'.concat(this.props.selectedMovie.youtubeId);
+    const movieId = this.props.selectedMovie.id;
+    const title = this.props.selectedMovie.title;
     return (
       <div className="player">
-        <h1>{this.props.selectedMovie.id} {this.props.selectedMovie.title}</h1>
+        <h1>{movieId} {title}</h1>
         <iframe src={id} frameBorder="0" allowFullScreen></iframe>
       </div>
     );
